@@ -1,0 +1,38 @@
+name: Run Postman Tests
+
+# Trigger the workflow on push or pull request
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      # Step 3: Install Newman globally
+      - name: Install Newman
+        run: npm install -g newman
+
+      # Step 4: Run the Postman collection with Newman
+      - name: Run Postman Tests
+        run: newman run "Postman Test Automation for Mock API.postman_collection.json" -r cli,json --reporter-json-export results.json
+
+      # Step 5: Upload the test results as an artifact
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: newman-test-results
+          path: results.json
