@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "96ead59a-8c72-459d-b8cc-e5edd442ec1e",
 		"name": "Postman Test Automation for Mock API",
-		"description": "I created 12 test cases using the test design techniques below in order to cover some test scenarios. Reference link for these techniques; [https://www.istqb.org/certifications/certified-tester-foundation-level](https://www.istqb.org/certifications/certified-tester-foundation-level)\n\n**1 . Black-Box Techniques:**  \na. Equivalence Partitioning – 3 Test cases; TC-01, 02, 03,  \nb. Boundary Value Analysis – 4 Test cases; TC-04, 05, 06, 07,  \nc. Decision Table Testing – 2 Test cases; TC-08, 09,  \n\n**2.Experience-Based Techniques**  \na. Exploratory Testing – 3 test cases; TC-10, 11, 12.\n\n**Test Case Overview**  \nI added test scripts within the post-response section of the project to incorporate logic that validates the input fields of the Mock API. This ensures the POST request is properly validated, and the test cases accurately determine whether they pass or fail.",
+		"description": "I created 11 test cases using the test design techniques below in order to cover some test scenarios. Reference link for these techniques; [https://www.istqb.org/certifications/certified-tester-foundation-level](https://www.istqb.org/certifications/certified-tester-foundation-level)\n\n**1 . Black-Box Techniques:**  \na. Equivalence Partitioning – 3 Test cases; TC-01, 02, 03,  \nb. Boundary Value Analysis – 4 Test cases; TC-04, 05, 06, 07,  \nc. Decision Table Testing – 2 Test cases; TC-08, 09,  \n\n**2.Experience-Based Techniques**  \na. Exploratory Testing – 2 test cases; TC-10, 11.\n\n**Test Case Overview**  \nI added test scripts within the post-response section of the project to incorporate logic that validates the input fields of the Mock API. This ensures the POST request is properly validated, and the test cases accurately determine whether they pass or fail.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "40054788"
 	},
@@ -321,38 +321,9 @@
 				}
 			},
 			"response": []
-		},
+		},	
 		{
-			"name": "TC-11.  Verify Response for Invalid JSON Syntax",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\":\"The Top 10 Most Important Tips to Improve Your Daily Activity and Concentration\"\r\n    \"body\": \"The following post offers practical ways to increase your output and maintain concentration all day long.\",\r\n    \"type\": 2\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/posts",
-					"protocol": "https",
-					"host": [
-						"jsonplaceholder",
-						"typicode",
-						"com"
-					],
-					"path": [
-						"posts"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "TC-12. Verify the response for invalid data types for all 3 parameters",
+			"name": "TC-11. Verify the response for invalid data types for all 3 parameters",
 			"event": [
 				{
 					"listen": "test",
