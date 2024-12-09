@@ -77,6 +77,6 @@ Feel free to fork this repository and contribute to the project by submitting pu
 
 ## License
 This project is licensed under the **MIT License**. Check the **LICENSE** file for more details.
-
+You are free to use, modify, and distribute this project as per the license terms.
                       
 
