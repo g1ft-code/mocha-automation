@@ -53,17 +53,37 @@ Here’s how you can get this project up and running:
 ### 1. Clone the Repository
 Start by cloning the repository to your local machine
 
+```bash
+git clone https://github.com/your-username/postman-api-automation.git
+cd postman-api-automation
+```
+
 ## 2. Install Newman
 Make sure you have Node.js installed, then install Newman.
+
+```bash
+npm install -g newman
+```
 
 ## 3. Run the Tests Locally
 You can test the Postman collection locally using Newman.
 
+```bash
+newman run postman_collection.json
+```
+
 ## 4. Automate with GitHub Actions
 Once you’ve made changes and pushed them to GitHub, the workflow will automatically run the tests for you. Just check the **Actions** tab in GitHub to see the results.
 
+
 ## 5. Review Test Results
-Results are visible in the **GitHub Actions** tab.  
+Results are visible in the **GitHub Actions** tab. 
+Alternatively, generate local reports using:
+
+```bash
+ newman run postman_collection.json --reporters cli,json --reporter-json-export results.json
+ ```
+
 
 ## How You Can Learn from This Project
 This project is great if you’re looking to:
@@ -78,4 +98,5 @@ Feel free to fork this repository and contribute to the project by submitting pu
 ## License
 This project is licensed under the **MIT License**. Check the **LICENSE** file for more details.
 You are free to use, modify, and distribute this project as per the license terms.
-                      
+
+  
