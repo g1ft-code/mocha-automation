@@ -51,7 +51,7 @@ This setup makes it easy to catch issues early and ensures consistent test execu
 Here’s how you can get this project up and running:
 
 ### 1. Clone the Repository
-Start by cloning the repository to your local machine
+Start by cloning the repository to your local machine and navigating into the project directory.
 
 ```bash
 git clone https://github.com/your-username/postman-api-automation.git
